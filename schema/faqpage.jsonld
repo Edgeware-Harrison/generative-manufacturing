@@ -1,0 +1,83 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://whatisgenm.com/faq/#faq",
+  "url": "https://whatisgenm.com/faq/",
+  "author": {
+    "@id": "https://whatisgenm.com/#person"
+  },
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Generative Manufacturing (GenM)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who defined GenM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Harrison Chan. He has worked in overseas manufacturing for about 15 years overall and has been head of Miracle Plus Physical AI Lab since September 2026."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GenM the same as generative design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Generative design produces optimized geometry. GenM requires a closed loop: intent, structure generation, physical execution, and failures fed back into the next version."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is GenM different from Carnegie Mellon's generative manufacturing research?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CMU's Manufacturing Futures Institute uses the term for AI that jointly optimizes design, production, and supply-chain alternatives. That is close to GenM's paradigm half. GenM adds a rights claim: the demand side speaks in intent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GenM 3D printing with AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. GenM is process-agnostic. The engineering path can end in CNC machining, casting, molding, or assembly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GenM a lights-out factory?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. GenM sets no headcount or autonomy target. People can stay in the loop; the test is whether the intent was honored."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does GenM relate to Physical AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GenM is what Physical AI does to manufacturing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a fulfillable commitment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The object, its quality, its timeline, and whether it can actually be delivered, tied to the intent that started it and to who verified it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a GenM product I can buy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. GenM is a paradigm, not a product."
+      }
+    }
+  ]
+}

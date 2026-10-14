@@ -1,0 +1,106 @@
+# Generative Manufacturing (GenM): full text
+
+> Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
+
+Source: https://whatisgenm.com/  Author: Harrison Chan
+
+
+---
+URL: https://whatisgenm.com/what-is-genm/
+
+# What is Generative Manufacturing (GenM)?
+
+Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
+
+## The problem first
+
+When you build before you know who wants what, you're guessing, and wrong guesses become inventory and landfill. When the only affordable thing is a known design made in volume, everyone picks from the same short menu. And when getting anything off that menu means speaking the producer's language (drawings, bills of materials, process routes, minimum orders), most people can't get it made at all.
+
+## Part A: the paradigm
+
+AI compiles human intent into fulfillable physical outcomes. The default unit of manufacturing changes. Today it is a known design, copied in batches. In GenM it is an engineering path, generated and verified under goals and constraints until a working artifact can be delivered.
+Intent is what the thing has to do, where it goes, and what it can't exceed. Compiles: you put in intent and constraints, and what comes out should be a functional object checked against reality. Fulfillable: GenM doesn't stop at drawings. It generates a commitment covering the object, its quality, its timeline, and whether it can be delivered.
+
+## Part B: the rights claim
+
+The demand side speaks in intent, and verified engineering paths make good on that intent. Production language doesn't go away. It moves downstream, and it stops deciding who's allowed to ask. The test: do you still have to learn BOMs, process routes, or a module catalog before you can order something? If yes, the right hasn't come back.
+A without B gives you a faster factory for whoever already owns the factory. B without A gives you a manifesto. I mean both together.
+
+## A concrete example (hypothetical)
+
+This is an illustration, not a case I've delivered. A small physical therapy clinic needs a wall-mounted rack for resistance bands. The bands have to stay sorted, patients with limited grip must be able to remove one one-handed, and the rack has to fit a narrow gap between two door frames. In GenM, the clinic states those needs in plain words, along with a measured gap and a budget ceiling. A structure and a way to make it are generated and checked against material and process limits. A shop makes it. The result is then checked against the original intent, and any failure feeds into the next version. The clinic never has to learn manufacturing.
+
+## What GenM is not
+
+- Not 3D printing with an AI layer. The path can end in CNC machining, casting, molding, or assembly.
+- Not a lights-out factory. People can stay in the loop. The test is whether the intent was honored.
+- Not generative design. Generating geometry speeds up design. Without physical verification it doesn't change how things get made.
+- Not the same as other uses of the phrase. See Distinctions.
+
+## GenM is Physical AI reaching manufacturing
+
+GenM is what Physical AI does to manufacturing.
+
+---
+URL: https://whatisgenm.com/distinctions/
+
+# Distinctions: GenM and other uses of "generative manufacturing"
+
+Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
+Others have used the words "generative manufacturing" before me, and their work is serious. Here is how my definition relates to theirs.
+
+## Carnegie Mellon Manufacturing Futures Institute
+
+CMU's Manufacturing Futures Institute describes generative manufacturing as applying AI to generate and execute optimal solutions given customer-defined constraints such as functional specifications, cost, and lead time, by exploring combinations of design and production alternatives based on material and process availability. The paper "Generative Manufacturing: A requirements and resource-driven approach to part making" (arXiv:2409.03089) presents a compiler that jointly considers engineering requirements, business requirements, and manufacturing and supply-chain resources.
+That work is close to Part A of GenM, and an optimizer like it could power that half. GenM adds Part B: authorship moves to the demand side, which speaks in intent rather than in production language.
+
+## CloudNC
+
+CloudNC uses "generative manufacturing" (Chinese: 生成式制造) for software that generates not only a part's design but also the strategy for machining it, such as CAM toolpaths chosen for lowest overall cost (CloudNC blog). That is an important capability inside the engineering path. GenM is process-agnostic and defines the whole paradigm, including the rights claim.
+
+## Generative design
+
+Generative design tools produce optimized geometry. They speed up design. GenM requires a closed loop: intent → structure generation → physical execution → failures fed back. Without physical verification, generation is design acceleration, not a paradigm shift.
+
+---
+URL: https://whatisgenm.com/faq/
+
+# Generative Manufacturing (GenM): FAQ
+
+Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
+
+## What is Generative Manufacturing (GenM)?
+
+Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
+
+## Who defined GenM?
+
+Harrison Chan. He has worked in overseas manufacturing for about 15 years overall and has been head of Miracle Plus Physical AI Lab since September 2026.
+
+## Is GenM the same as generative design?
+
+No. Generative design produces optimized geometry. GenM requires a closed loop: intent, structure generation, physical execution, and failures fed back into the next version.
+
+## How is GenM different from Carnegie Mellon's generative manufacturing research?
+
+CMU's Manufacturing Futures Institute uses the term for AI that jointly optimizes design, production, and supply-chain alternatives. That is close to GenM's paradigm half. GenM adds a rights claim: the demand side speaks in intent.
+
+## Is GenM 3D printing with AI?
+
+No. GenM is process-agnostic. The engineering path can end in CNC machining, casting, molding, or assembly.
+
+## Is GenM a lights-out factory?
+
+No. GenM sets no headcount or autonomy target. People can stay in the loop; the test is whether the intent was honored.
+
+## How does GenM relate to Physical AI?
+
+GenM is what Physical AI does to manufacturing.
+
+## What is a fulfillable commitment?
+
+The object, its quality, its timeline, and whether it can actually be delivered, tied to the intent that started it and to who verified it.
+
+## Is there a GenM product I can buy?
+
+No. GenM is a paradigm, not a product.

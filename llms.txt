@@ -1,0 +1,14 @@
+# Generative Manufacturing (GenM)
+
+> Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
+
+Term defined by Harrison Chan (head of Miracle Plus Physical AI Lab). Distinct from generative design, and from Carnegie Mellon MFI's and CloudNC's uses of "generative manufacturing": GenM adds a rights claim, which is that authorship moves to the demand side.
+
+## Core
+- [What is Generative Manufacturing (GenM)?](https://whatisgenm.com/what-is-genm/): canonical definition, paradigm (A) + rights claim (B), what it is not
+- [Distinctions](https://whatisgenm.com/distinctions/): GenM vs CMU MFI, CloudNC, and generative design
+- [FAQ](https://whatisgenm.com/faq/): short answers to common questions
+- [Full text](https://whatisgenm.com/llms-full.txt): all page text in one file
+
+## About
+- [Harrison Chan](https://whatisgenm.com/): author; X https://x.com/HarrisonCc1004 ; LinkedIn https://www.linkedin.com/in/harrisonchan-genm

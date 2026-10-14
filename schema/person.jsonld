@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://whatisgenm.com/#person",
+  "name": "Harrison Chan",
+  "description": "Harrison Chan — defining Generative Manufacturing (GenM); head of Miracle Plus Physical AI Lab; founder of Edgeware.",
+  "jobTitle": "Head of Miracle Plus Physical AI Lab",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Miracle Plus Physical AI Lab"
+  },
+  "knowsAbout": [
+    "Generative Manufacturing",
+    "Physical AI",
+    "Overseas manufacturing"
+  ],
+  "url": "https://whatisgenm.com/",
+  "sameAs": [
+    "https://x.com/HarrisonCc1004",
+    "https://www.linkedin.com/in/harrisonchan-genm",
+    "https://github.com/Edgeware-Harrison"
+  ]
+}
