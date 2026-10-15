@@ -1,0 +1,18 @@
+{
+ "sources": {
+  "cmu": "https://engineering.cmu.edu/mfi/research/generative-manufacturing.html",
+  "arxiv": "https://arxiv.org/abs/2409.03089",
+  "cmu_code": "https://github.com/AdityaJoglekar/Generative_Manufacturing",
+  "cloudnc": "https://www.cloudnc.com/blog/generative-manufacturing-or-how-to-transform-how-we-make-everything-forever",
+  "autodesk": "https://www.autodesk.com/solutions/generative-design",
+  "iso_opc": "https://reference.opcfoundation.org/specs/OPC-40540/3.2.1",
+  "iso_iteh": "https://standards.iteh.ai/catalog/standards/cen/4612338f-1a77-455d-905d-178e41f0aae8/en-iso-astm-52900-2021",
+  "nist": "https://www.nist.gov/blogs/manufacturing-innovation-blog/digital-manufacturing-small-manufacturers",
+  "siemens": "https://www.siemens.com/en-us/technology/digital-manufacturing/",
+  "mxd": "https://www.mxdusa.org/our-story/",
+  "a3": "https://www.automate.org/industry-insights/should-manufacturers-turn-off-the-lights",
+  "assembly": "https://www.assemblymag.com/articles/94982-lights-out-automation-fact-or-fiction",
+  "csm": "https://www.csmonitor.com/1981/0415/041542.html",
+  "nv_pr": "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development"
+ }
+}

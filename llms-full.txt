@@ -42,25 +42,192 @@ This is an illustration, not a case I've delivered. A small physical therapy cli
 GenM is what Physical AI does to manufacturing.
 
 ---
+URL: https://whatisgenm.com/glossary/
+
+# Generative Manufacturing glossary
+
+Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
+Two groups. First, the words I use in GenM, in my wording. Second, terms other people use, each with a source. Where the same words carry another meaning, I credit who used them. See also Distinctions and GenM vs adjacent terms. Sources last checked 2026-10-15.
+
+## Terms as used in GenM
+
+### Generative Manufacturing (GenM)
+
+Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
+The locked definition.
+
+### Intent
+
+What the thing has to do, where it goes, and what it can't exceed. A drawing or a part number doesn't have to come first.
+As used in GenM.
+
+### Compiles
+
+Closest metaphor: you put in intent and constraints, and what comes out should be a functional object that has been checked against reality.
+As used in GenM.
+
+### Engineering path
+
+In GenM, the default unit of manufacturing: a path generated and verified under goals and constraints until a working artifact can be delivered.
+As used in GenM.
+
+### Fulfillable commitment
+
+The object, its quality, its timeline, and whether it can actually be delivered, tied to the intent that started it and to who verified it.
+As used in GenM.
+
+### Part A: the paradigm
+
+AI compiles human intent into fulfillable physical outcomes.
+As used in GenM.
+
+### Part B: the rights claim
+
+The demand side speaks in intent, and verified engineering paths make good on that intent. Authorship moves back toward the person with the need.
+As used in GenM.
+
+## Terms used by others
+
+### Generative manufacturing (Carnegie Mellon MFI usage)
+
+CMU's Manufacturing Futures Institute describes it as applying AI to generate and execute optimal solutions given customer-defined constraints such as functional specifications, cost, and lead time, by exploring combinations of design and production alternatives. The arXiv paper (submitted 4 Sep 2024) presents a "Generative Manufacturing compiler" that jointly considers engineering requirements, business requirements, and manufacturing and supply-chain resources. Sources: CMU MFI; arXiv:2409.03089.
+Prior use of the phrase.
+
+### Generative manufacturing (CloudNC usage)
+
+CloudNC co-founder Chris Emery wrote on 16 October 2024 that "generative manufacturing" is when software does not just generate designs for a component but also creates the strategy to manufacture it, which CloudNC applies to CAM programming. Source: CloudNC blog.
+Prior use of the phrase.
+
+### Generative design
+
+Autodesk describes generative design as an algorithm-driven process, sometimes enabled by AI, that explores design options meeting criteria and constraints set by engineers or designers. Source: Autodesk.
+Adjacent term.
+
+### Additive manufacturing
+
+ISO/ASTM 52900:2021 defines it as the "process of joining materials to make parts from 3D model data, usually layer upon layer, as opposed to subtractive manufacturing and formative manufacturing methodologies." Sources: OPC Foundation, quoting the standard; standard text excerpt.
+Adjacent term.
+
+### Digital manufacturing
+
+NIST describes digital manufacturing and design as using digital technology to collect and use information to increase efficiency across a manufactured product's lifecycle. Siemens describes it as an integrated, computer-based system of simulation, 3D visualization, analytics and collaboration tools that defines product and manufacturing process together. Sources: NIST; Siemens.
+Adjacent term.
+
+### Lights-out manufacturing
+
+An approach in which processes are fully automated and require little or no human intervention (A3). ASSEMBLY magazine's "pure definition" is a facility where human hands never touch a product during the entire process. Sources: A3; ASSEMBLY.
+Adjacent term.
+
+### Physical AI
+
+NVIDIA's 6 January 2025 press release uses "physical AI systems" for systems such as autonomous vehicles and robots. Source: NVIDIA Newsroom. In GenM, Physical AI is the wider field; GenM is what Physical AI does to manufacturing.
+Adjacent term.
+Back to What is Generative Manufacturing (GenM)?
+
+---
+URL: https://whatisgenm.com/genm-vs-adjacent-terms/
+
+# GenM vs adjacent terms
+
+Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
+What this page is for: a side-by-side comparison of GenM with neighbouring ideas. For credit to earlier uses of the same phrase, with dates, see Distinctions.
+Each row below gives what others say, with a link to the source, then how GenM differs in my wording. I have not tried to rank these ideas. Several are serious work I rely on. Sources last checked 2026-10-15.
+
+Term | As defined or described by others (sourced) | How GenM differs | 
+
+Generative design | Algorithm-driven process, sometimes AI-enabled, that generates design options from goals and constraints (Autodesk). | Generating images or geometry speeds up design. Without physical verification it doesn't change how things get made. GenM does not stop at drawings; it generates a fulfillable commitment. | 
+
+Generative manufacturing (CMU MFI) | AI that generates and executes optimal solutions under customer constraints (cost, lead time) across design and production alternatives (CMU MFI); paper: arXiv:2409.03089, submitted 4 Sep 2024. | Part A overlaps in goal: constraints in, a producible result out. GenM adds Part B: authorship moves back to the demand side, which speaks in intent. | 
+
+Generative manufacturing (CloudNC) | Software that generates not only a component's design but the strategy to manufacture it, applied to CAM programming; post dated 16 Oct 2024 (CloudNC). | CloudNC's post addresses manufacturers: it speaks of "upscaling the capacity of every manufacturer". GenM is not tied to any one process and adds Part B, the rights claim. | 
+
+Lights-out manufacturing | Processes fully automated, requiring little or no human intervention (A3). | GenM sets no target for headcount or autonomy. People can stay in the loop. The test is whether the intent was honored. | 
+
+Digital manufacturing | Using digital technology to collect and use information to increase efficiency across a product's lifecycle (NIST). | GenM asks a different question: do you still have to learn BOMs, process routes, or a module catalog before you can order something? If yes, the right hasn't come back. | 
+
+Additive manufacturing | Joining materials to make parts from 3D model data, usually layer upon layer (ISO/ASTM 52900:2021 via OPC Foundation). | GenM isn't 3D printing with an AI layer. The path can end in CNC machining, casting, molding, or assembly. | 
+
+Physical AI | NVIDIA uses "physical AI systems" for systems such as autonomous vehicles and robots (NVIDIA, 6 Jan 2025). | GenM is what Physical AI does to manufacturing. | 
+
+## Same words, earlier use
+
+Carnegie Mellon's Manufacturing Futures Institute and CloudNC both used "generative manufacturing" before this site existed. The credit and dates are on Distinctions.
+
+## One test
+
+Ask of any term: does it include the closed loop of intent, structure generation, physical execution, and failures fed back? Without that loop, generation is design acceleration, not a paradigm shift.
+Definitions of the terms above are in the glossary. Back to What is Generative Manufacturing (GenM)?
+
+---
 URL: https://whatisgenm.com/distinctions/
 
 # Distinctions: GenM and other uses of "generative manufacturing"
 
 Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
-Others have used the words "generative manufacturing" before me, and their work is serious. Here is how my definition relates to theirs.
+What this page is for: crediting the people who used the phrase "generative manufacturing" before this site existed, with dates and sources. For a side-by-side of GenM and neighbouring ideas such as lights-out or additive manufacturing, see GenM vs adjacent terms.
+
+## Prior use of the phrase
+
+I did not invent the words "generative manufacturing". Others used them before this site existed, and I credit them here:
+
+- Carnegie Mellon University, Manufacturing Futures Institute and the paper arXiv:2409.03089, submitted 4 September 2024. This is the earliest dated use I have verified so far.
+- CloudNC, in a blog post by co-founder Chris Emery dated 16 October 2024: Generative manufacturing: or how to transform how we make everything, forever.
+
+What I define is GenM, as the sentence above says. I use the phrase differently from them, and the sections below explain how. Dates were checked on 2026-10-15; see the timeline for what I could not verify.
 
 ## Carnegie Mellon Manufacturing Futures Institute
 
-CMU's Manufacturing Futures Institute describes generative manufacturing as applying AI to generate and execute optimal solutions given customer-defined constraints such as functional specifications, cost, and lead time, by exploring combinations of design and production alternatives based on material and process availability. The paper "Generative Manufacturing: A requirements and resource-driven approach to part making" (arXiv:2409.03089) presents a compiler that jointly considers engineering requirements, business requirements, and manufacturing and supply-chain resources.
-That work is close to Part A of GenM, and an optimizer like it could power that half. GenM adds Part B: authorship moves to the demand side, which speaks in intent rather than in production language.
+CMU's Manufacturing Futures Institute describes generative manufacturing as applying AI to generate and execute optimal solutions given customer-defined constraints and parameters, such as functional specifications, cost, and lead time, by exploring combinations of design and production alternatives based on material and process availability. The paper "Generative Manufacturing: A requirements and resource-driven approach to part making" (authors from Carnegie Mellon University and Lockheed Martin) presents a Generative Manufacturing compiler that takes an engineering requirements specification, a business requirements specification, and knowledge of the current manufacturing state, then generates and evaluates process alternatives and the designs they imply. The authors released an implementation on GitHub.
+The paper also uses the word "compiler", so the overlap with my "compiles" wording is real. Their work is close to Part A of GenM in goal: constraints in, a producible result out. GenM adds Part B: authorship moves to the demand side, which speaks in intent rather than in production language.
 
 ## CloudNC
 
-CloudNC uses "generative manufacturing" (Chinese: 生成式制造) for software that generates not only a part's design but also the strategy for machining it, such as CAM toolpaths chosen for lowest overall cost (CloudNC blog). That is an important capability inside the engineering path. GenM is process-agnostic and defines the whole paradigm, including the rights claim.
+In its post, CloudNC says it is applying its technology "to create a new paradigm" it calls generative manufacturing: software that does not just generate designs for a component but also creates the strategy to manufacture it. CloudNC applies this to CAM programming through its CAM Assist solution, which creates CNC machining toolpaths and strategies and looks for the lowest-cost one. That is an important capability inside an engineering path. The post speaks to manufacturers, for example "upscaling the capacity of every manufacturer". GenM is not tied to one process and adds Part B, the rights claim.
 
 ## Generative design
 
-Generative design tools produce optimized geometry. They speed up design. GenM requires a closed loop: intent → structure generation → physical execution → failures fed back. Without physical verification, generation is design acceleration, not a paradigm shift.
+Autodesk describes generative design as an algorithm-driven process, sometimes enabled by AI, that explores design options meeting criteria and constraints. Generative design tools speed up design. GenM requires a closed loop: intent, structure generation, physical execution, and failures fed back. Without physical verification, generation is design acceleration, not a paradigm shift.
+More terms are compared on GenM vs adjacent terms and defined in the glossary. Back to What is Generative Manufacturing (GenM)?
+
+---
+URL: https://whatisgenm.com/timeline/
+
+# Timeline: generative manufacturing and GenM
+
+Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
+Events from other people carry a source link; "Source read" means I read the linked page on 2026-10-15. Three rows are about me and are marked "author-stated": they are my own account, with no independent source yet. Anything I could not verify is in the second list, not in the table. This page will change as I find earlier sources.
+
+Date | Event | Source | Status | 
+
+15 Apr 1981 (reporting a plant opened Nov 1980) | The Christian Science Monitor reports a Fujitsu Fanuc robot factory near Mt. Fuji where robots make robots for about 16 hours of each working day, with workers returning next morning to complete final assembly. Context for lights-out manufacturing. | CSMonitor, 15 Apr 1981 | Source read | 
+
+2010 to 2020 | Harrison Chan runs a large furniture ODM factory in Surabaya, Indonesia (company name not disclosed). | None; author-stated | author-stated | 
+
+2014 | DMDII (Digital Manufacturing and Design Innovation Institute) is founded; it is now called MxD. Context for digital manufacturing. | MxD, Our story | Source read | 
+
+2021 | ISO/ASTM 52900:2021 edition of the additive manufacturing vocabulary standard. Year only; month not verified. | Standard text excerpt | Source read | 
+
+c. 2021 | Harrison Chan founds Edgeware. | None; author-stated | author-stated | 
+
+4 Sep 2024 | arXiv:2409.03089, "Generative Manufacturing: A requirements and resource-driven approach to part making" (Carnegie Mellon University and Lockheed Martin authors), submitted. Earliest dated use of the phrase that I have verified so far. | arXiv abstract page (submission date shown as 4 Sep 2024) | Source read | 
+
+16 Oct 2024 | CloudNC co-founder Chris Emery publishes "Generative manufacturing: or how to transform how we make everything, forever". | CloudNC blog | Source read | 
+
+6 Jan 2025 | NVIDIA announces the Cosmos world foundation model platform for physical AI systems (CES). The press release uses the term "physical AI". | NVIDIA Newsroom | Source read | 
+
+Since Sep 2026 | Harrison Chan is head of Miracle Plus Physical AI Lab. | None; author-stated | author-stated | 
+
+TBD | First public posting of the GenM definition at whatisgenm.com. [PLACEHOLDER: fill in the real date at publication.] | (this site) | PLACEHOLDER | 
+
+## Not verified
+
+- Date of the CMU MFI generative manufacturing page: the page is undated. I read it on 2026-10-15: CMU MFI.
+- Any use of "generative manufacturing" before 4 Sep 2024: I searched the web, not an academic database, so earlier uses may exist.
+- When Autodesk first shipped generative design: not verified here.
+- When the phrase "physical AI" was first used: not verified. The NVIDIA date above is only the date of that press release.
+- The three rows marked author-stated are Harrison Chan's own account. I have no independent public source for them yet.
+
+How these uses differ from GenM: Distinctions. Back to What is Generative Manufacturing (GenM)?
 
 ---
 URL: https://whatisgenm.com/faq/

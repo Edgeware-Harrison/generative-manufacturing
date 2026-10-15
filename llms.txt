@@ -6,7 +6,10 @@ Term defined by Harrison Chan (head of Miracle Plus Physical AI Lab). Distinct f
 
 ## Core
 - [What is Generative Manufacturing (GenM)?](https://whatisgenm.com/what-is-genm/): canonical definition, paradigm (A) + rights claim (B), what it is not
-- [Distinctions](https://whatisgenm.com/distinctions/): GenM vs CMU MFI, CloudNC, and generative design
+- [Glossary](https://whatisgenm.com/glossary/): GenM terms and sourced definitions of adjacent terms
+- [GenM vs adjacent terms](https://whatisgenm.com/genm-vs-adjacent-terms/): side-by-side comparison with generative design, lights-out, digital and additive manufacturing, Physical AI
+- [Distinctions](https://whatisgenm.com/distinctions/): credit to earlier uses of the phrase (CMU MFI, CloudNC), with dates
+- [Timeline](https://whatisgenm.com/timeline/): dated, sourced events; unverified items marked
 - [FAQ](https://whatisgenm.com/faq/): short answers to common questions
 - [Full text](https://whatisgenm.com/llms-full.txt): all page text in one file
 

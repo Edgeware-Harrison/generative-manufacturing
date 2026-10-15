@@ -1,0 +1,93 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://whatisgenm.com/#glossary",
+  "name": "Generative Manufacturing glossary",
+  "url": "https://whatisgenm.com/glossary/",
+  "creator": {
+    "@id": "https://whatisgenm.com/#person"
+  },
+  "hasDefinedTerm": [
+    {
+      "@id": "https://whatisgenm.com/what-is-genm/#term"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Intent",
+      "description": "What the thing has to do, where it goes, and what it can't exceed. A drawing or a part number doesn't have to come first.",
+      "url": "https://whatisgenm.com/glossary/#intent"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Compiles",
+      "description": "Closest metaphor: you put in intent and constraints, and what comes out should be a functional object that has been checked against reality.",
+      "url": "https://whatisgenm.com/glossary/#compiles"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Engineering path",
+      "description": "In GenM, the default unit of manufacturing: a path generated and verified under goals and constraints until a working artifact can be delivered.",
+      "url": "https://whatisgenm.com/glossary/#engineering-path"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Fulfillable commitment",
+      "description": "The object, its quality, its timeline, and whether it can actually be delivered, tied to the intent that started it and to who verified it.",
+      "url": "https://whatisgenm.com/glossary/#fulfillable-commitment"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Part A: the paradigm",
+      "description": "AI compiles human intent into fulfillable physical outcomes.",
+      "url": "https://whatisgenm.com/glossary/#part-a"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Part B: the rights claim",
+      "description": "The demand side speaks in intent, and verified engineering paths make good on that intent. Authorship moves back toward the person with the need.",
+      "url": "https://whatisgenm.com/glossary/#part-b"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Generative manufacturing (Carnegie Mellon MFI usage)",
+      "description": "CMU's Manufacturing Futures Institute describes it as applying AI to generate and execute optimal solutions given customer-defined constraints such as functional specifications, cost, and lead time, by exploring combinations of design and production alternatives. The arXiv paper (submitted 4 Sep 2024) presents a \"Generative Manufacturing compiler\" that jointly considers engineering requirements, business requirements, and manufacturing and supply-chain resources. Sources: CMU MFI; arXiv:2409.03089.",
+      "url": "https://whatisgenm.com/glossary/#generative-manufacturing-cmu"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Generative manufacturing (CloudNC usage)",
+      "description": "CloudNC co-founder Chris Emery wrote on 16 October 2024 that \"generative manufacturing\" is when software does not just generate designs for a component but also creates the strategy to manufacture it, which CloudNC applies to CAM programming. Source: CloudNC blog.",
+      "url": "https://whatisgenm.com/glossary/#generative-manufacturing-cloudnc"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Generative design",
+      "description": "Autodesk describes generative design as an algorithm-driven process, sometimes enabled by AI, that explores design options meeting criteria and constraints set by engineers or designers. Source: Autodesk.",
+      "url": "https://whatisgenm.com/glossary/#generative-design"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Additive manufacturing",
+      "description": "ISO/ASTM 52900:2021 defines it as the \"process of joining materials to make parts from 3D model data, usually layer upon layer, as opposed to subtractive manufacturing and formative manufacturing methodologies.\" Sources: OPC Foundation, quoting the standard; standard text excerpt.",
+      "url": "https://whatisgenm.com/glossary/#additive-manufacturing"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Digital manufacturing",
+      "description": "NIST describes digital manufacturing and design as using digital technology to collect and use information to increase efficiency across a manufactured product's lifecycle. Siemens describes it as an integrated, computer-based system of simulation, 3D visualization, analytics and collaboration tools that defines product and manufacturing process together. Sources: NIST; Siemens.",
+      "url": "https://whatisgenm.com/glossary/#digital-manufacturing"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Lights-out manufacturing",
+      "description": "An approach in which processes are fully automated and require little or no human intervention (A3). ASSEMBLY magazine's \"pure definition\" is a facility where human hands never touch a product during the entire process. Sources: A3; ASSEMBLY.",
+      "url": "https://whatisgenm.com/glossary/#lights-out-manufacturing"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Physical AI",
+      "description": "NVIDIA's 6 January 2025 press release uses \"physical AI systems\" for systems such as autonomous vehicles and robots. Source: NVIDIA Newsroom. In GenM, Physical AI is the wider field; GenM is what Physical AI does to manufacturing.",
+      "url": "https://whatisgenm.com/glossary/#physical-ai"
+    }
+  ]
+}

@@ -5,9 +5,13 @@ Static files, no build step. Nothing has been pushed or published yet.
 ## Files
 - `index.html`: home and about (Person JSON-LD)
 - `what-is-genm/index.html`: canonical definition (DefinedTerm + Person JSON-LD)
-- `distinctions/index.html`: GenM vs CMU MFI, CloudNC, and generative design (DefinedTerm JSON-LD)
+- `distinctions/index.html`: credit to earlier uses of the phrase (CMU MFI + arXiv 2409.03089, CloudNC), with dates
+- `genm-vs-adjacent-terms/index.html`: side-by-side comparison with adjacent terms
+- `glossary/index.html`: glossary (DefinedTermSet, id `https://whatisgenm.com/#glossary`)
+- `timeline/index.html`: dated, sourced events; three author-stated rows
+- `essays/index.html`: essay archive (placeholder; `noindex`, not in sitemap or llms files until the first post)
 - `faq/index.html`: FAQ (FAQPage JSON-LD)
-- `schema/definedterm.jsonld`, `schema/person.jsonld`, `schema/faqpage.jsonld`: standalone copies
+- `schema/definedterm.jsonld`, `schema/definedtermset.jsonld`, `schema/person.jsonld`, `schema/faqpage.jsonld`: standalone copies
 - `llms.txt`, `llms-full.txt`, `robots.txt`, `sitemap.xml`, `.nojekyll`
 
 ## Base URL
@@ -39,6 +43,8 @@ Check with `dig whatisgenm.com +noall +answer` and `dig www.whatisgenm.com +noal
 <!-- DNS-NOTES-END -->
 
 ## Validate
+`python3 check_links.py` makes a live HTTP check of every URL in `sources.json` (network needed). To publish the first essay: add it to `ESSAYS` in `build.py`, drop `noindex=True` on the essays page, add it to the sitemap and llms lists, rebuild.
+
 `python3 validate.py` parses all HTML and embedded or standalone JSON-LD.
 For a final check after deploying, use https://validator.schema.org and https://search.google.com/test/rich-results.
 
