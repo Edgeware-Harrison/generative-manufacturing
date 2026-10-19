@@ -53,7 +53,7 @@ page("","Generative Manufacturing (GenM) | Harrison Chan",DEF,f'''<h1>Generative
 <p>For about two hundred years, the people who make things and the people who use them have been kept apart. That separation made mass production possible. It also brought waste, sameness, and powerlessness: building before you know who wants what, everyone picking from the same short menu, and most people unable to get anything made without speaking the producer's language.</p>
 <p>Generative Manufacturing is my definition of the shift that starts to undo that separation.</p>
 <ul><li><a href="{BASE}/what-is-genm/">What is Generative Manufacturing (GenM)?</a>: the canonical definition</li>
-<li><a href="{BASE}/distinctions/">How GenM differs from other uses of the term</a></li>
+<li><a href="{BASE}/distinctions/">How Generative Manufacturing (GenM) differs from other uses of the term</a></li>
 <li><a href="{BASE}/essays/">Essays</a>, starting with <a href="{BASE}/essays/{P1_SLUG}/">Why no one has a compiler for physical things yet</a></li></ul>
 <h2>About me</h2>
 <p>I'm Harrison Chan. I've been head of Miracle Plus Physical AI Lab since September 2026. I've worked in overseas manufacturing for about 15 years overall. From 2010 to 2020 I ran a furniture ODM in Surabaya, Indonesia. I founded Arterki and Taktak, and I've been building Edgeware since around 2021.</p>
