@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://whatisgenm.com/</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://whatisgenm.com/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://whatisgenm.com/what-is-genm/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://whatisgenm.com/glossary/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://whatisgenm.com/genm-vs-adjacent-terms/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://whatisgenm.com/distinctions/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://whatisgenm.com/timeline/</loc><lastmod>2026-10-15</lastmod></url>
   <url><loc>https://whatisgenm.com/faq/</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://whatisgenm.com/llms.txt</loc><lastmod>2026-10-15</lastmod></url>
-  <url><loc>https://whatisgenm.com/llms-full.txt</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://whatisgenm.com/essays/</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://whatisgenm.com/essays/why-no-one-has-a-compiler-for-physical-things-yet/</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://whatisgenm.com/llms.txt</loc><lastmod>2026-10-19</lastmod></url>
+  <url><loc>https://whatisgenm.com/llms-full.txt</loc><lastmod>2026-10-19</lastmod></url>
 </urlset>

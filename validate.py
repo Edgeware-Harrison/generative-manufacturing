@@ -23,7 +23,7 @@ import xml.dom.minidom; xml.dom.minidom.parse("sitemap.xml"); print("ok sitemap.
 BASE="https://whatisgenm.com"
 import os
 for f in glob.glob("**/*",recursive=True):
-    if os.path.isfile(f) and f not in ("validate.py","build.py","README.md","CNAME"):
+    if os.path.isfile(f) and f not in ("validate.py","build.py","README.md","CNAME") and not f.endswith((".png",".jpg",".webp")):
         t=open(f,encoding="utf-8").read()
         if "YOUR-GH" in t or "genm-site" in t or "github.io" in t: ok=False; print("OLD BASE",f)
         if "hreflang" in t or BASE+"/zh" in t: ok=False; print("ZH REF",f)
@@ -67,7 +67,7 @@ def exists(url):
     path=url[len(BASE):].split("#")[0].lstrip("/")
     return os.path.exists((path+"index.html") if (path=="" or path.endswith("/")) else path)
 pages=sorted(glob.glob("**/index.html",recursive=True))
-NOINDEX={"essays/index.html"}
+NOINDEX=set()  # essays noindex removed when P1 shipped (2026-10-19)
 defined={}; refs=[]
 def walk(o,pg):
     if isinstance(o,dict):
@@ -133,12 +133,12 @@ if tm["inDefinedTermSet"]["@id"]!=gs["@id"]: fail("term/termset id mismatch")
 locs=re.findall(r"<loc>(.*?)</loc>",open("sitemap.xml").read())
 for p in ("glossary/","genm-vs-adjacent-terms/","timeline/","distinctions/"):
     if f"{BASE}/{p}" not in locs: fail("sitemap missing",p)
-if f"{BASE}/essays/" in locs: fail("noindex essays must not be in sitemap")
+if f"{BASE}/essays/" not in locs: fail("essays archive missing from sitemap")
 ll=open("llms.txt").read(); lf=open("llms-full.txt").read()
 for p in ("glossary/","genm-vs-adjacent-terms/","timeline/","distinctions/"):
     if f"{BASE}/{p}" not in ll: fail("llms.txt missing",p)
     if f"URL: {BASE}/{p}" not in lf: fail("llms-full.txt missing",p)
-if "/essays/" in ll or "URL: "+BASE+"/essays/" in lf: fail("essays must not be in llms files")
+if "/essays/" not in ll or "URL: "+BASE+"/essays/" not in lf: fail("essays missing from llms files")
 for u in re.findall(r"\((https://whatisgenm[^)]*)\)",ll):
     if not exists(u): fail("llms.txt dead link",u)
 for f in pages:

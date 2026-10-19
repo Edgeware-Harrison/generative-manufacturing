@@ -13,5 +13,9 @@ Term defined by Harrison Chan (head of Miracle Plus Physical AI Lab). Distinct f
 - [FAQ](https://whatisgenm.com/faq/): short answers to common questions
 - [Full text](https://whatisgenm.com/llms-full.txt): all page text in one file
 
+## Essays
+- [Essays on Generative Manufacturing](https://whatisgenm.com/essays/): archive of Harrison Chan's essays
+- [Why no one has a compiler for physical things yet](https://whatisgenm.com/essays/why-no-one-has-a-compiler-for-physical-things-yet/): Six jobs a compiler for physical things would have to do, who covers which part, and where the evidence runs out.
+
 ## About
 - [Harrison Chan](https://whatisgenm.com/): author; X https://x.com/HarrisonCc1004 ; LinkedIn https://www.linkedin.com/in/harrisonchan-genm

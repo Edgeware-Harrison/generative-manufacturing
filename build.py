@@ -1,6 +1,7 @@
 import json, os, html
 BASE="https://whatisgenm.com"
 DEF="Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it."
+P1_SLUG="why-no-one-has-a-compiler-for-physical-things-yet"
 BIO="Harrison Chan — defining Generative Manufacturing (GenM); head of Miracle Plus Physical AI Lab; founder of Edgeware."
 person={"@context":"https://schema.org","@type":"Person","@id":f"{BASE}/#person","name":"Harrison Chan","description":BIO,
  "jobTitle":"Head of Miracle Plus Physical AI Lab","worksFor":{"@type":"Organization","name":"Miracle Plus Physical AI Lab"},
@@ -15,7 +16,7 @@ json.dump(term,open("schema/definedterm.jsonld","w"),ensure_ascii=False,indent=2
 def ld(o): return '<script type="application/ld+json">\n'+json.dumps(o,ensure_ascii=False,indent=2)+'\n</script>'
 NAV='<nav aria-label="Primary">'+" · ".join(f'<a href="{BASE}/{p}">{n}</a>' for n,p in [("Home",""),("What is GenM?","what-is-genm/"),("Glossary","glossary/"),("Compare","genm-vs-adjacent-terms/"),("Timeline","timeline/"),("Essays","essays/"),("FAQ","faq/")])+'</nav>'
 FOOT=f'<footer><p><strong>{DEF}</strong></p><p>{BIO}</p></footer>'
-def page(path,title,desc,body,schemas,crumb=None,noindex=False):
+def page(path,title,desc,body,schemas,crumb=None,noindex=False,image=None):
     url=f"{BASE}/{path}/" if path else f"{BASE}/"
     robots='\n<meta name="robots" content="noindex, nofollow">' if noindex else ''
     bc=(bc_html(crumb)+"\n") if crumb else ''
@@ -32,7 +33,7 @@ def page(path,title,desc,body,schemas,crumb=None,noindex=False):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="{'summary_large_image' if image else 'summary'}">{(chr(10)+'<meta property="og:image" content="'+image+'">'+chr(10)+'<meta name="twitter:image" content="'+image+'">') if image else ''}
 <meta name="twitter:creator" content="@HarrisonCc1004">
 <style>body{{max-width:42rem;margin:2rem auto;padding:0 1rem;font:17px/1.6 system-ui,sans-serif;color:#222}}blockquote{{border-left:4px solid #333;margin:1rem 0;padding:.2rem 1rem;font-weight:600}}nav,footer{{font-size:.9rem;color:#555}}footer{{border-top:1px solid #ddd;margin-top:3rem;padding-top:1rem}}table{{border-collapse:collapse;width:100%;font-size:.9rem}}th,td{{border:1px solid #ccc;padding:.4rem;vertical-align:top;text-align:left}}.placeholder{{background:#f3f3f3;border:1px dashed #888;padding:.5rem}}.unverified{{color:#8a4b00}}</style>
 {chr(10).join(ld(s) for s in schemas)}
@@ -52,7 +53,8 @@ page("","Generative Manufacturing (GenM) | Harrison Chan",DEF,f'''<h1>Generative
 <p>For about two hundred years, the people who make things and the people who use them have been kept apart. That separation made mass production possible. It also brought waste, sameness, and powerlessness: building before you know who wants what, everyone picking from the same short menu, and most people unable to get anything made without speaking the producer's language.</p>
 <p>Generative Manufacturing is my definition of the shift that starts to undo that separation.</p>
 <ul><li><a href="{BASE}/what-is-genm/">What is Generative Manufacturing (GenM)?</a>: the canonical definition</li>
-<li><a href="{BASE}/distinctions/">How GenM differs from other uses of the term</a></li></ul>
+<li><a href="{BASE}/distinctions/">How GenM differs from other uses of the term</a></li>
+<li><a href="{BASE}/essays/">Essays</a>, starting with <a href="{BASE}/essays/{P1_SLUG}/">Why no one has a compiler for physical things yet</a></li></ul>
 <h2>About me</h2>
 <p>I'm Harrison Chan. I've been head of Miracle Plus Physical AI Lab since September 2026. I've worked in overseas manufacturing for about 15 years overall. From 2010 to 2020 I ran a furniture ODM in Surabaya, Indonesia. I founded Arterki and Taktak, and I've been building Edgeware since around 2021.</p>
 <p>Find me on <a href="https://x.com/HarrisonCc1004">X</a> and <a href="https://www.linkedin.com/in/harrisonchan-genm">LinkedIn</a>.</p>''',[person])
@@ -75,27 +77,7 @@ page("what-is-genm","What is Generative Manufacturing (GenM)? | Harrison Chan",D
 <li><strong>Not the same as other uses of the phrase.</strong> See <a href="{BASE}/distinctions/">Distinctions</a>.</li></ul>
 <h2>GenM is Physical AI reaching manufacturing</h2>
 <p>GenM is what Physical AI does to manufacturing.</p>''',[term,person])
-open("llms.txt","w").write(f"""# Generative Manufacturing (GenM)
-
-> {DEF}
-
-Term defined by Harrison Chan (head of Miracle Plus Physical AI Lab). Distinct from generative design, and from Carnegie Mellon MFI's and CloudNC's uses of "generative manufacturing": GenM adds a rights claim, which is that authorship moves to the demand side.
-
-## Core
-- [What is Generative Manufacturing (GenM)?]({BASE}/what-is-genm/): canonical definition, paradigm (A) + rights claim (B), what it is not
-- [Glossary]({BASE}/glossary/): GenM terms and sourced definitions of adjacent terms
-- [GenM vs adjacent terms]({BASE}/genm-vs-adjacent-terms/): side-by-side comparison with generative design, lights-out, digital and additive manufacturing, Physical AI
-- [Distinctions]({BASE}/distinctions/): credit to earlier uses of the phrase (CMU MFI, CloudNC), with dates
-- [Timeline]({BASE}/timeline/): dated, sourced events; unverified items marked
-- [FAQ]({BASE}/faq/): short answers to common questions
-- [Full text]({BASE}/llms-full.txt): all page text in one file
-
-## About
-- [Harrison Chan]({BASE}/): author; X https://x.com/HarrisonCc1004 ; LinkedIn https://www.linkedin.com/in/harrisonchan-genm
-""")
 open("robots.txt","w").write(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
-urls="".join(f"  <url><loc>{BASE}/{p}</loc><lastmod>2026-10-15</lastmod></url>\n" for p in ["","what-is-genm/","glossary/","genm-vs-adjacent-terms/","distinctions/","timeline/","faq/","llms.txt","llms-full.txt"])
-open("sitemap.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
 open(".nojekyll","w").write("")
 
 # ---- FAQ ----
@@ -118,8 +100,9 @@ page("faq","Generative Manufacturing (GenM) FAQ | Harrison Chan",DEF,fb,[faq])
 
 # ---- release block: glossary, compare, timeline, essays, revised distinctions (merged from genm-site-drafts) ----
 VERIFIED="2026-10-15"
-ESSAYS=[]
-NOINDEX_ESSAYS_UNTIL_POSTS=True
+ESSAYS=[{"slug":P1_SLUG,"title":"Why no one has a compiler for physical things yet","date":"2026-10-19",
+  "summary":"Six jobs a compiler for physical things would have to do, who covers which part, and where the evidence runs out."}]
+NOINDEX_ESSAYS_UNTIL_POSTS=False
 person_ref={"@id":f"{BASE}/#person"}
 SET_ID=f"{BASE}/#glossary"   # same id the live term pages already use
 def term_obj(name,desc,url,alt=None):
@@ -142,6 +125,11 @@ S={
  "a3":"https://www.automate.org/industry-insights/should-manufacturers-turn-off-the-lights",
  "assembly":"https://www.assemblymag.com/articles/94982-lights-out-automation-fact-or-fiction",
  "csm":"https://www.csmonitor.com/1981/0415/041542.html",
+ "tnw_atomic":"https://thenextweb.com/news/atomic-machines-250m-matter-compiler-micro-machines",
+ "atomic":"https://www.atomicmachines.com/matter-compiler",
+ "p1_x":"https://x.com/HarrisonCc1004/status/2112156316764627109",
+ "p1_li_post":"https://www.linkedin.com/feed/update/urn:li:activity:7517923120914055170/",
+ "p1_li_article":"https://www.linkedin.com/pulse/why-one-has-compiler-physical-things-yet-harrison-chan-5bxpc/",
  "nv_pr":"https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development",
 }
 def A(k,text): return f'<a href="{S[k]}">{text}</a>'
@@ -297,7 +285,10 @@ f'''<h1>Essays on Generative Manufacturing</h1>
 <p>Start with <a href="{U("what-is-genm")}">What is Generative Manufacturing (GenM)?</a> or the <a href="{U("faq")}">FAQ</a>.</p>''',
 [{"@context":"https://schema.org","@type":"CollectionPage","@id":U("essays")+"#page","name":"Essays on Generative Manufacturing","url":U("essays"),"author":person_ref,"about":{"@id":term["@id"]},"inLanguage":"en",
   **({"hasPart":[{"@type":"Article","headline":e["title"],"url":U("essays/"+e["slug"]),"datePublished":e["date"],"author":person_ref} for e in ESSAYS]} if ESSAYS else {})},
- crumbs([("Home",U("")),("Essays",U("essays"))])],[HOME,("Essays",U("essays"))],noindex=True)
+ crumbs([("Home",U("")),("Essays",U("essays"))])],[HOME,("Essays",U("essays"))])
+
+# ---- P1 essay page ----
+exec(open("essay_p1.py").read())
 
 # =============== 5. REVISED DISTINCTIONS ===============
 page("distinctions","GenM vs generative design and other uses of 'generative manufacturing' | Harrison Chan",
@@ -331,8 +322,35 @@ def txt(p):
     m=_re.sub(r"<h3[^>]*>(.*?)</h3>",r"\n### \1\n",m); m=_re.sub(r"</t[dh]>"," | ",m); m=_re.sub(r"</tr>","\n",m); m=_re.sub(r"<li[^>]*>",r"- ",m); m=_re.sub(r"<[^>]+>","",m); m=_h.unescape(m)
     return _re.sub(r"\n{3,}","\n\n",m).strip()
 parts=[f"# Generative Manufacturing (GenM): full text\n\n> {DEF}\n\nSource: {BASE}/  Author: Harrison Chan\n"]
-for p,u in [("what-is-genm/index.html","what-is-genm/"),("glossary/index.html","glossary/"),("genm-vs-adjacent-terms/index.html","genm-vs-adjacent-terms/"),("distinctions/index.html","distinctions/"),("timeline/index.html","timeline/"),("faq/index.html","faq/")]:
+for p,u in [("what-is-genm/index.html","what-is-genm/"),("glossary/index.html","glossary/"),("genm-vs-adjacent-terms/index.html","genm-vs-adjacent-terms/"),("distinctions/index.html","distinctions/"),("timeline/index.html","timeline/"),("faq/index.html","faq/"),("essays/index.html","essays/")]+[(f"essays/{e['slug']}/index.html",f"essays/{e['slug']}/") for e in ESSAYS]:
     parts.append(f"---\nURL: {BASE}/{u}\n\n"+txt(p))
 open("llms-full.txt","w").write("\n\n".join(parts)+"\n")
 
 json.dump({"sources":S},open("sources.json","w"),indent=1)
+
+# ---- llms.txt + sitemap (emitted last so ESSAYS is known) ----
+open("llms.txt","w").write(f"""# Generative Manufacturing (GenM)
+
+> {DEF}
+
+Term defined by Harrison Chan (head of Miracle Plus Physical AI Lab). Distinct from generative design, and from Carnegie Mellon MFI's and CloudNC's uses of "generative manufacturing": GenM adds a rights claim, which is that authorship moves to the demand side.
+
+## Core
+- [What is Generative Manufacturing (GenM)?]({BASE}/what-is-genm/): canonical definition, paradigm (A) + rights claim (B), what it is not
+- [Glossary]({BASE}/glossary/): GenM terms and sourced definitions of adjacent terms
+- [GenM vs adjacent terms]({BASE}/genm-vs-adjacent-terms/): side-by-side comparison with generative design, lights-out, digital and additive manufacturing, Physical AI
+- [Distinctions]({BASE}/distinctions/): credit to earlier uses of the phrase (CMU MFI, CloudNC), with dates
+- [Timeline]({BASE}/timeline/): dated, sourced events; unverified items marked
+- [FAQ]({BASE}/faq/): short answers to common questions
+- [Full text]({BASE}/llms-full.txt): all page text in one file
+
+## Essays
+- [Essays on Generative Manufacturing]({BASE}/essays/): archive of Harrison Chan's essays
+""" + "".join(f"- [{e['title']}]({U('essays/'+e['slug'])}): {e['summary']}\n" for e in ESSAYS) + f"""
+## About
+- [Harrison Chan]({BASE}/): author; X https://x.com/HarrisonCc1004 ; LinkedIn https://www.linkedin.com/in/harrisonchan-genm
+""")
+LASTMOD={"":"2026-10-19","essays/":"2026-10-19","llms.txt":"2026-10-19","llms-full.txt":"2026-10-19",**{f"essays/{e['slug']}/":e["date"] for e in ESSAYS}}
+SM=["","what-is-genm/","glossary/","genm-vs-adjacent-terms/","distinctions/","timeline/","faq/","essays/"]+[f"essays/{e['slug']}/" for e in ESSAYS]+["llms.txt","llms-full.txt"]
+urls="".join(f"  <url><loc>{BASE}/{p}</loc><lastmod>{LASTMOD.get(p,'2026-10-15')}</lastmod></url>\n" for p in SM)
+open("sitemap.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
