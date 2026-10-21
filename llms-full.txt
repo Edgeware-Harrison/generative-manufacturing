@@ -215,8 +215,6 @@ c. 2021 | Harrison Chan founds Edgeware. | None; author-stated | author-stated |
 
 6 Jan 2025 | NVIDIA announces the Cosmos world foundation model platform for physical AI systems (CES). The press release uses the term "physical AI". | NVIDIA Newsroom | Source read | 
 
-Since Sep 2026 | Harrison Chan is head of Miracle Plus Physical AI Lab. | None; author-stated | author-stated | 
-
 TBD | First public posting of the GenM definition at whatisgenm.com. [PLACEHOLDER: fill in the real date at publication.] | (this site) | PLACEHOLDER | 
 
 ## Not verified
@@ -242,7 +240,7 @@ Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compil
 
 ## Who defined GenM?
 
-Harrison Chan. He has worked in overseas manufacturing for about 15 years overall and has been head of Miracle Plus Physical AI Lab since September 2026.
+Harrison Chan, founder of Edgeware. He has worked in overseas manufacturing for about 15 years overall.
 
 ## Is GenM the same as generative design?
 

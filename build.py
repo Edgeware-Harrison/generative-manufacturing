@@ -2,9 +2,9 @@ import json, os, html
 BASE="https://whatisgenm.com"
 DEF="Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it."
 P1_SLUG="why-no-one-has-a-compiler-for-physical-things-yet"
-BIO="Harrison Chan — defining Generative Manufacturing (GenM); head of Miracle Plus Physical AI Lab; founder of Edgeware."
+BIO="Harrison Chan, founder of Edgeware, defining Generative Manufacturing (GenM)."
 person={"@context":"https://schema.org","@type":"Person","@id":f"{BASE}/#person","name":"Harrison Chan","description":BIO,
- "jobTitle":"Head of Miracle Plus Physical AI Lab","worksFor":{"@type":"Organization","name":"Miracle Plus Physical AI Lab"},
+ "jobTitle":"Founder","worksFor":{"@type":"Organization","name":"Edgeware"},
  "knowsAbout":["Generative Manufacturing","Physical AI","Overseas manufacturing"],
  "url":f"{BASE}/","sameAs":["https://x.com/HarrisonCc1004","https://www.linkedin.com/in/harrisonchan-genm","https://github.com/Edgeware-Harrison"]}
 term={"@context":"https://schema.org","@type":"DefinedTerm","@id":f"{BASE}/what-is-genm/#term","name":"Generative Manufacturing",
@@ -56,7 +56,7 @@ page("","Generative Manufacturing (GenM) | Harrison Chan",DEF,f'''<h1>Generative
 <li><a href="{BASE}/distinctions/">How Generative Manufacturing (GenM) differs from other uses of the term</a></li>
 <li><a href="{BASE}/essays/">Essays</a>, starting with <a href="{BASE}/essays/{P1_SLUG}/">Why no one has a compiler for physical things yet</a></li></ul>
 <h2>About me</h2>
-<p>I'm Harrison Chan. I've been head of Miracle Plus Physical AI Lab since September 2026. I've worked in overseas manufacturing for about 15 years overall. From 2010 to 2020 I ran a furniture ODM in Surabaya, Indonesia. I founded Arterki and Taktak, and I've been building Edgeware since around 2021.</p>
+<p>I'm Harrison Chan, founder of Edgeware, which I've been building since around 2021. I've worked in overseas manufacturing for about 15 years overall. From 2010 to 2020 I ran a furniture ODM in Surabaya, Indonesia. Before Edgeware, I also founded Arterki and Taktak.</p>
 <p>Find me on <a href="https://x.com/HarrisonCc1004">X</a> and <a href="https://www.linkedin.com/in/harrisonchan-genm">LinkedIn</a>.</p>''',[person])
 page("what-is-genm","What is Generative Manufacturing (GenM)? | Harrison Chan",DEF,f'''<h1>What is Generative Manufacturing (GenM)?</h1>
 <blockquote>{DEF}</blockquote>
@@ -82,7 +82,7 @@ open(".nojekyll","w").write("")
 
 # ---- FAQ ----
 FAQ=[("What is Generative Manufacturing (GenM)?",DEF),
-("Who defined GenM?","Harrison Chan. He has worked in overseas manufacturing for about 15 years overall and has been head of Miracle Plus Physical AI Lab since September 2026."),
+("Who defined GenM?","Harrison Chan, founder of Edgeware. He has worked in overseas manufacturing for about 15 years overall."),
 ("Is GenM the same as generative design?","No. Generative design produces optimized geometry. GenM requires a closed loop: intent, structure generation, physical execution, and failures fed back into the next version."),
 ("How is GenM different from Carnegie Mellon's generative manufacturing research?","CMU's Manufacturing Futures Institute uses the term for AI that jointly optimizes design, production, and supply-chain alternatives. That is close to GenM's paradigm half. GenM adds a rights claim: the demand side speaks in intent."),
 ("Is GenM 3D printing with AI?","No. GenM is process-agnostic. The engineering path can end in CNC machining, casting, molding, or assembly."),
@@ -235,7 +235,6 @@ TL=[ # (sortkey, date label, event, source html, status)
  ("2025-01-06","6 Jan 2025","NVIDIA announces the Cosmos world foundation model platform for physical AI systems (CES). The press release uses the term \"physical AI\".",A("nv_pr","NVIDIA Newsroom"),V),
  ("2010","2010 to 2020","Harrison Chan runs a large furniture ODM factory in Surabaya, Indonesia (company name not disclosed).","None; author-stated","author-stated"),
  ("2021b","c. 2021","Harrison Chan founds Edgeware.","None; author-stated","author-stated"),
- ("2026-09","Since Sep 2026","Harrison Chan is head of Miracle Plus Physical AI Lab.","None; author-stated","author-stated"),
  ("2026-tbd","TBD","First public posting of the GenM definition at whatisgenm.com. [PLACEHOLDER: fill in the real date at publication.]","(this site)","PLACEHOLDER"),
 ]
 UNV=[
@@ -333,7 +332,7 @@ open("llms.txt","w").write(f"""# Generative Manufacturing (GenM)
 
 > {DEF}
 
-Term defined by Harrison Chan (head of Miracle Plus Physical AI Lab). Distinct from generative design, and from Carnegie Mellon MFI's and CloudNC's uses of "generative manufacturing": GenM adds a rights claim, which is that authorship moves to the demand side.
+Term defined by Harrison Chan (founder of Edgeware). Distinct from generative design, and from Carnegie Mellon MFI's and CloudNC's uses of "generative manufacturing": GenM adds a rights claim, which is that authorship moves to the demand side.
 
 ## Core
 - [What is Generative Manufacturing (GenM)?]({BASE}/what-is-genm/): canonical definition, paradigm (A) + rights claim (B), what it is not

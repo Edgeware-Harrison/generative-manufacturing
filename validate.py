@@ -114,9 +114,9 @@ for need in ["/distinctions/","What this page is for"]:
 t=html_of["timeline/index.html"]
 rows=[r for r in re.findall(r"<tr[^>]*>(.*?)</tr>",t,re.S)[1:]]
 auth=[r for r in rows if "author-stated" in re.findall(r"<td>(.*?)</td>",r,re.S)[-1]]
-if len(auth)!=3: fail("timeline must have exactly 3 author-stated rows, found",len(auth))
+if len(auth)!=2: fail("timeline must have exactly 2 author-stated rows, found",len(auth))
 atxt=" ".join(auth)
-for need in ["Surabaya","2010 to 2020","Miracle Plus Physical AI Lab","Edgeware","c. 2021"]:
+for need in ["Surabaya","2010 to 2020","founds Edgeware","c. 2021"]:
     if need not in atxt: fail("author-stated row missing",need)
 if "Arterki" in t or "Taktak" in t: fail("Arterki/Taktak must stay off the timeline")
 if "15 years" in t: fail("15 years on timeline")
@@ -144,4 +144,10 @@ for u in re.findall(r"\((https://whatisgenm[^)]*)\)",ll):
 for f in pages:
     target=f"{BASE}/{os.path.dirname(f)}/" if os.path.dirname(f) else f"{BASE}/"
     if not any(target in html_of[g] for g in pages if g!=f): fail("orphan",f)
+# bio: lead with Edgeware founder; no Miracle anywhere in built output
+for f in [os.path.join(dp,fn) for dp,_,fns in os.walk(".") if "/.git" not in dp and not dp.startswith("./.git") for fn in fns if fn.endswith((".html",".jsonld",".txt",".xml",".json"))]:
+    if "miracle" in open(f,errors="ignore").read().lower(): fail("Miracle must not appear in built output",f)
+pj=json.load(open("schema/person.jsonld"))
+if pj.get("jobTitle")!="Founder" or pj.get("worksFor",{}).get("name")!="Edgeware": fail("person schema must be Founder of Edgeware")
+if "I'm Harrison Chan, founder of Edgeware" not in html_of["index.html"]: fail("home bio must lead with founder of Edgeware")
 print("ALL PASS" if ok else "FAILURES"); sys.exit(0 if ok else 1)
