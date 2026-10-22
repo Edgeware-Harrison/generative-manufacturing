@@ -10,7 +10,7 @@ Static files, no build step. Nothing has been pushed or published yet.
 - `glossary/index.html`: glossary (DefinedTermSet, id `https://whatisgenm.com/#glossary`)
 - `timeline/index.html`: dated, sourced events; three author-stated rows
 - `essays/index.html`: essay archive (indexed since P1 shipped 2026-10-19)
-- `essays/<slug>/index.html`: essay pages, built by `essay_p1.py` from the verbatim approved markdown in `essays_src/<slug>.md` (Article JSON-LD)
+- `essays/<slug>/index.html`: essay pages, built by `essays_build.py` from the verbatim approved markdown in `essays_src/<slug>.md` (Article JSON-LD)
 - `faq/index.html`: FAQ (FAQPage JSON-LD)
 - `schema/definedterm.jsonld`, `schema/definedtermset.jsonld`, `schema/person.jsonld`, `schema/faqpage.jsonld`: standalone copies
 - `llms.txt`, `llms-full.txt`, `robots.txt`, `sitemap.xml`, `.nojekyll`

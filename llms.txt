@@ -16,6 +16,7 @@ Term defined by Harrison Chan (founder of Edgeware). Distinct from generative de
 ## Essays
 - [Essays on Generative Manufacturing](https://whatisgenm.com/essays/): archive of Harrison Chan's essays
 - [Why no one has a compiler for physical things yet](https://whatisgenm.com/essays/why-no-one-has-a-compiler-for-physical-things-yet/): Six jobs a compiler for physical things would have to do, who covers which part, and where the evidence runs out.
+- [Intent, not drawings](https://whatisgenm.com/essays/intent-not-drawings/): Why the drawing belongs in the middle of the process, not at the front door, and what a system owes a person who states a need in plain words.
 
 ## About
 - [Harrison Chan](https://whatisgenm.com/): author; X https://x.com/HarrisonCc1004 ; LinkedIn https://www.linkedin.com/in/harrisonchan-genm

@@ -2,6 +2,7 @@ import json, os, html
 BASE="https://whatisgenm.com"
 DEF="Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it."
 P1_SLUG="why-no-one-has-a-compiler-for-physical-things-yet"
+P2_SLUG="intent-not-drawings"
 BIO="Harrison Chan, founder of Edgeware, defining Generative Manufacturing (GenM)."
 person={"@context":"https://schema.org","@type":"Person","@id":f"{BASE}/#person","name":"Harrison Chan","description":BIO,
  "jobTitle":"Founder","worksFor":{"@type":"Organization","name":"Edgeware"},
@@ -101,7 +102,9 @@ page("faq","Generative Manufacturing (GenM) FAQ | Harrison Chan",DEF,fb,[faq])
 # ---- release block: glossary, compare, timeline, essays, revised distinctions (merged from genm-site-drafts) ----
 VERIFIED="2026-10-15"
 ESSAYS=[{"slug":P1_SLUG,"title":"Why no one has a compiler for physical things yet","date":"2026-10-19",
-  "summary":"Six jobs a compiler for physical things would have to do, who covers which part, and where the evidence runs out."}]
+  "summary":"Six jobs a compiler for physical things would have to do, who covers which part, and where the evidence runs out."},
+ {"slug":P2_SLUG,"title":"Intent, not drawings","date":"2026-10-22",
+  "summary":"Why the drawing belongs in the middle of the process, not at the front door, and what a system owes a person who states a need in plain words."}]
 NOINDEX_ESSAYS_UNTIL_POSTS=False
 person_ref={"@id":f"{BASE}/#person"}
 SET_ID=f"{BASE}/#glossary"   # same id the live term pages already use
@@ -130,6 +133,9 @@ S={
  "p1_x":"https://x.com/HarrisonCc1004/status/2112156316764627109",
  "p1_li_post":"https://www.linkedin.com/feed/update/urn:li:activity:7517923120914055170/",
  "p1_li_article":"https://www.linkedin.com/pulse/why-one-has-compiler-physical-things-yet-harrison-chan-5bxpc/",
+ "p2_x":"https://x.com/HarrisonCc1004/status/2113245073098018998",
+ "p2_li_post":"https://www.linkedin.com/feed/update/urn:li:activity:7519011059114889216/",
+ "p2_li_article":"https://www.linkedin.com/pulse/intent-drawings-harrison-chan-olxcc/",
  "nv_pr":"https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-world-foundation-model-platform-to-accelerate-physical-ai-development",
 }
 def A(k,text): return f'<a href="{S[k]}">{text}</a>'
@@ -286,8 +292,8 @@ f'''<h1>Essays on Generative Manufacturing</h1>
   **({"hasPart":[{"@type":"Article","headline":e["title"],"url":U("essays/"+e["slug"]),"datePublished":e["date"],"author":person_ref} for e in ESSAYS]} if ESSAYS else {})},
  crumbs([("Home",U("")),("Essays",U("essays"))])],[HOME,("Essays",U("essays"))])
 
-# ---- P1 essay page ----
-exec(open("essay_p1.py").read())
+# ---- essay pages ----
+exec(open("essays_build.py").read())
 
 # =============== 5. REVISED DISTINCTIONS ===============
 page("distinctions","GenM vs generative design and other uses of 'generative manufacturing' | Harrison Chan",
@@ -349,7 +355,7 @@ Term defined by Harrison Chan (founder of Edgeware). Distinct from generative de
 ## About
 - [Harrison Chan]({BASE}/): author; X https://x.com/HarrisonCc1004 ; LinkedIn https://www.linkedin.com/in/harrisonchan-genm
 """)
-LASTMOD={"":"2026-10-19","essays/":"2026-10-19","llms.txt":"2026-10-19","llms-full.txt":"2026-10-19",**{f"essays/{e['slug']}/":e["date"] for e in ESSAYS}}
+LASTMOD={"":"2026-10-19","essays/":"2026-10-22","llms.txt":"2026-10-22","llms-full.txt":"2026-10-22",**{f"essays/{e['slug']}/":e["date"] for e in ESSAYS}}
 SM=["","what-is-genm/","glossary/","genm-vs-adjacent-terms/","distinctions/","timeline/","faq/","essays/"]+[f"essays/{e['slug']}/" for e in ESSAYS]+["llms.txt","llms-full.txt"]
 urls="".join(f"  <url><loc>{BASE}/{p}</loc><lastmod>{LASTMOD.get(p,'2026-10-15')}</lastmod></url>\n" for p in SM)
 open("sitemap.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
