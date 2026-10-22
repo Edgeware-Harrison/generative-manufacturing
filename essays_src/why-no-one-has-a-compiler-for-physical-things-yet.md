@@ -91,4 +91,6 @@ Follow for the next notes.
 - [The Next Web, Atomic Machines Matter Compiler](https://thenextweb.com/news/atomic-machines-250m-matter-compiler-micro-machines)
 - [Atomic Machines, Matter Compiler](https://www.atomicmachines.com/matter-compiler)
 
+Reference page: [https://whatisgenm.com](https://whatisgenm.com)
+
 Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.

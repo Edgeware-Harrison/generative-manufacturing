@@ -55,7 +55,7 @@ page("","Generative Manufacturing (GenM) | Harrison Chan",DEF,f'''<h1>Generative
 <p>Generative Manufacturing is my definition of the shift that starts to undo that separation.</p>
 <ul><li><a href="{BASE}/what-is-genm/">What is Generative Manufacturing (GenM)?</a>: the canonical definition</li>
 <li><a href="{BASE}/distinctions/">How Generative Manufacturing (GenM) differs from other uses of the term</a></li>
-<li><a href="{BASE}/essays/">Essays</a>, starting with <a href="{BASE}/essays/{P1_SLUG}/">Why no one has a compiler for physical things yet</a></li></ul>
+<li><a href="{BASE}/essays/">Essays</a>, including <a href="{BASE}/essays/{P1_SLUG}/">Why no one has a compiler for physical things yet</a> and <a href="{BASE}/essays/{P2_SLUG}/">Intent, not drawings</a></li></ul>
 <h2>About me</h2>
 <p>I'm Harrison Chan, founder of Edgeware, which I've been building since around 2021. I've worked in overseas manufacturing for about 15 years overall. From 2010 to 2020 I ran a furniture ODM in Surabaya, Indonesia. Before Edgeware, I also founded Arterki and Taktak.</p>
 <p>Find me on <a href="https://x.com/HarrisonCc1004">X</a> and <a href="https://www.linkedin.com/in/harrisonchan-genm">LinkedIn</a>.</p>''',[person])
@@ -355,7 +355,7 @@ Term defined by Harrison Chan (founder of Edgeware). Distinct from generative de
 ## About
 - [Harrison Chan]({BASE}/): author; X https://x.com/HarrisonCc1004 ; LinkedIn https://www.linkedin.com/in/harrisonchan-genm
 """)
-LASTMOD={"":"2026-10-19","essays/":"2026-10-22","llms.txt":"2026-10-22","llms-full.txt":"2026-10-22",**{f"essays/{e['slug']}/":e["date"] for e in ESSAYS}}
+LASTMOD={"":"2026-10-22","essays/":"2026-10-22","llms.txt":"2026-10-22","llms-full.txt":"2026-10-22",**{f"essays/{e['slug']}/":e["date"] for e in ESSAYS}}
 SM=["","what-is-genm/","glossary/","genm-vs-adjacent-terms/","distinctions/","timeline/","faq/","essays/"]+[f"essays/{e['slug']}/" for e in ESSAYS]+["llms.txt","llms-full.txt"]
 urls="".join(f"  <url><loc>{BASE}/{p}</loc><lastmod>{LASTMOD.get(p,'2026-10-15')}</lastmod></url>\n" for p in SM)
 open("sitemap.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
