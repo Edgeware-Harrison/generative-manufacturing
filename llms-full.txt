@@ -355,6 +355,10 @@ Follow for the next notes.
 - The Next Web, Atomic Machines Matter Compiler
 - Atomic Machines, Matter Compiler
 
+## The short version, in 57 seconds
+
+Your browser does not play this video. The transcript is below.Nobody asked the person at the end (57 seconds). The voice is AI-generated, a clone of my own voice.
+TranscriptI ran a large furniture factory for ten years, and nobody in our chain ever asked the person at the end what they needed. Here's what I watched. A customer wanted faster delivery, so we automated. Automation only pays at volume, so the designs got simpler. Then a second customer saw the simple design selling and asked for the same thing. Everyone was working hard. The problem was structure, and I've spent years trying to name the fix. Here's the name I use. Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.
 Also on LinkedIn / X: LinkedIn article · LinkedIn post · X thread
 Reference page: https://whatisgenm.com
 Generative Manufacturing (GenM) is the manufacturing paradigm in which AI compiles human intent into fulfillable physical outcomes, so the demand side speaks in intent and verified engineering paths make good on it.

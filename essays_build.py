@@ -49,6 +49,9 @@ for e in ESSAYS:
     fig=(f'<figure><img src="{img}" alt="{_hh.escape(x["alt"])}" width="1600" height="900" loading="lazy" '
          f'style="max-width:100%;height:auto;border:1px solid #ddd"></figure>')
     i=next(k for k,b in enumerate(blocks) if b.startswith(x["after"])); blocks.insert(i+1,fig)
+    if e["slug"]==P1_SLUG:
+        j=next(k for k,b in enumerate(blocks) if b.startswith("<p>Also on") or b.startswith("<p>Reference page:") or b==f"<p>{DEF}</p>")
+        blocks.insert(j,"<h2 id=\"the-short-version\">The short version, in 57 seconds</h2>\n"+VIDEO_HTML)
     also='<p>Also on LinkedIn / X: '+' · '.join(f'<a href="{S[k]}">{n}</a>' for k,n in x["links"])+'</p>'
     ref=next((k for k,b in enumerate(blocks) if b.startswith("<p>Reference page:")),len(blocks)-1)
     blocks.insert(ref,also)
@@ -61,4 +64,4 @@ for e in ESSAYS:
          "sameAs":[S[k] for k in x["same"]],
          **({"citation":[S[k] for k in x["citation"]]} if x["citation"] else {})}
     page("essays/"+e["slug"],f'{e["title"]} | Harrison Chan',e["summary"],"\n".join(blocks),
-         [art,crumbs([("Home",U("")),("Essays",U("essays")),(e["title"],url)])],[HOME,("Essays",U("essays")),(e["title"],url)],image=img)
+         [art]+([video_obj] if e["slug"]==P1_SLUG else [])+[crumbs([("Home",U("")),("Essays",U("essays")),(e["title"],url)])],[HOME,("Essays",U("essays")),(e["title"],url)],image=img)

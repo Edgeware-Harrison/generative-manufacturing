@@ -17,6 +17,21 @@ json.dump(term,open("schema/definedterm.jsonld","w"),ensure_ascii=False,indent=2
 def ld(o): return '<script type="application/ld+json">\n'+json.dumps(o,ensure_ascii=False,indent=2)+'\n</script>'
 NAV='<nav aria-label="Primary">'+" · ".join(f'<a href="{BASE}/{p}">{n}</a>' for n,p in [("Home",""),("What is GenM?","what-is-genm/"),("Glossary","glossary/"),("Compare","genm-vs-adjacent-terms/"),("Timeline","timeline/"),("Essays","essays/"),("FAQ","faq/")])+'</nav>'
 FOOT=f'<footer><p><strong>{DEF}</strong></p><p>{BIO}</p></footer>'
+# ---- short video 01 (embed; files in media/) ----
+VID_URL=f"{BASE}/media/short01_web.mp4"; VID_POSTER=f"{BASE}/media/short01_poster_16x9.png"
+VID_TRANSCRIPT=("I ran a large furniture factory for ten years, and nobody in our chain ever asked the person at the end what they needed. "
+ "Here's what I watched. A customer wanted faster delivery, so we automated. Automation only pays at volume, so the designs got simpler. "
+ "Then a second customer saw the simple design selling and asked for the same thing. Everyone was working hard. The problem was structure, "
+ "and I've spent years trying to name the fix. Here's the name I use. "+DEF)
+VIDEO_HTML=(f'<figure><video controls preload="none" playsinline width="1920" height="1080" poster="{VID_POSTER}" '
+ f'src="{VID_URL}" style="max-width:100%;height:auto;border:1px solid #ddd">Your browser does not play this video. '
+ f'The transcript is below.</video><figcaption>Nobody asked the person at the end (57 seconds). '
+ f'The voice is AI-generated, a clone of my own voice.</figcaption></figure>\n'
+ f'<details><summary>Transcript</summary><p>{VID_TRANSCRIPT}</p></details>')
+video_obj={"@context":"https://schema.org","@type":"VideoObject","@id":f"{BASE}/#video-short01","name":"Nobody asked the person at the end",
+ "description":"Harrison Chan, founder of Edgeware, on how a furniture factory chain shaped its products, and the definition of Generative Manufacturing (GenM). AI-generated voice (clone of the author's own voice).",
+ "thumbnailUrl":VID_POSTER,"contentUrl":VID_URL,"uploadDate":"2026-10-23","duration":"PT57S","inLanguage":"en",
+ "author":{"@id":f"{BASE}/#person"},"about":{"@id":f"{BASE}/what-is-genm/#term"},"transcript":VID_TRANSCRIPT}
 def page(path,title,desc,body,schemas,crumb=None,noindex=False,image=None):
     url=f"{BASE}/{path}/" if path else f"{BASE}/"
     robots='\n<meta name="robots" content="noindex, nofollow">' if noindex else ''
@@ -56,9 +71,11 @@ page("","Generative Manufacturing (GenM) | Harrison Chan",DEF,f'''<h1>Generative
 <ul><li><a href="{BASE}/what-is-genm/">What is Generative Manufacturing (GenM)?</a>: the canonical definition</li>
 <li><a href="{BASE}/distinctions/">How Generative Manufacturing (GenM) differs from other uses of the term</a></li>
 <li><a href="{BASE}/essays/">Essays</a>, including <a href="{BASE}/essays/{P1_SLUG}/">Why no one has a compiler for physical things yet</a> and <a href="{BASE}/essays/{P2_SLUG}/">Intent, not drawings</a></li></ul>
+<h2>In 57 seconds</h2>
+{VIDEO_HTML}
 <h2>About me</h2>
 <p>I'm Harrison Chan, founder of Edgeware, which I've been building since around 2021. I've worked in overseas manufacturing for about 15 years overall. From 2010 to 2020 I ran a furniture ODM in Surabaya, Indonesia. Before Edgeware, I also founded Arterki and Taktak.</p>
-<p>Find me on <a href="https://x.com/HarrisonCc1004">X</a> and <a href="https://www.linkedin.com/in/harrisonchan-genm">LinkedIn</a>.</p>''',[person])
+<p>Find me on <a href="https://x.com/HarrisonCc1004">X</a> and <a href="https://www.linkedin.com/in/harrisonchan-genm">LinkedIn</a>.</p>''',[person,video_obj])
 page("what-is-genm","What is Generative Manufacturing (GenM)? | Harrison Chan",DEF,f'''<h1>What is Generative Manufacturing (GenM)?</h1>
 <blockquote>{DEF}</blockquote>
 <h2>The problem first</h2>
@@ -355,7 +372,7 @@ Term defined by Harrison Chan (founder of Edgeware). Distinct from generative de
 ## About
 - [Harrison Chan]({BASE}/): author; X https://x.com/HarrisonCc1004 ; LinkedIn https://www.linkedin.com/in/harrisonchan-genm
 """)
-LASTMOD={"":"2026-10-22","essays/":"2026-10-22","llms.txt":"2026-10-22","llms-full.txt":"2026-10-22",**{f"essays/{e['slug']}/":e["date"] for e in ESSAYS}}
+LASTMOD={"":"2026-10-23","essays/":"2026-10-22","llms.txt":"2026-10-22","llms-full.txt":"2026-10-22",**{f"essays/{e['slug']}/":e["date"] for e in ESSAYS}}
 SM=["","what-is-genm/","glossary/","genm-vs-adjacent-terms/","distinctions/","timeline/","faq/","essays/"]+[f"essays/{e['slug']}/" for e in ESSAYS]+["llms.txt","llms-full.txt"]
 urls="".join(f"  <url><loc>{BASE}/{p}</loc><lastmod>{LASTMOD.get(p,'2026-10-15')}</lastmod></url>\n" for p in SM)
 open("sitemap.xml","w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')

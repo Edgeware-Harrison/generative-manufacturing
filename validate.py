@@ -23,7 +23,7 @@ import xml.dom.minidom; xml.dom.minidom.parse("sitemap.xml"); print("ok sitemap.
 BASE="https://whatisgenm.com"
 import os
 for f in glob.glob("**/*",recursive=True):
-    if os.path.isfile(f) and f not in ("validate.py","build.py","README.md","CNAME") and not f.endswith((".png",".jpg",".webp")):
+    if os.path.isfile(f) and f not in ("validate.py","build.py","README.md","CNAME") and not f.endswith((".png",".jpg",".webp",".mp4")):
         t=open(f,encoding="utf-8").read()
         if "YOUR-GH" in t or "genm-site" in t or "github.io" in t: ok=False; print("OLD BASE",f)
         if "hreflang" in t or BASE+"/zh" in t: ok=False; print("ZH REF",f)
